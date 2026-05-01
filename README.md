@@ -1,4 +1,4 @@
-# 💳 Credit Card Fraud Detection — ML Pipeline
+# 💳 AI Credit Card Fraud Detection — ML Pipeline
 
 <div align="center">
 
