@@ -94,7 +94,7 @@ for i in range(29):
 if st.button("🚀 Predict Fraud"):
 
     response = requests.post(
-        "http://127.0.0.1:8000/predict",
+        "https://fraud-detection-ml-jp1y.onrender.com/predict",
         json={"features": inputs}
     )
 
