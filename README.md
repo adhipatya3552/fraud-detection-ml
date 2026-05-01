@@ -13,7 +13,7 @@
 **An end-to-end Machine Learning system that detects fraudulent credit card transactions using real-world anonymized data — featuring a full modular ML pipeline, a FastAPI backend for real-time predictions, an interactive Streamlit web UI, and Docker-based cloud deployment on Render.**
 
 🔗 **Live API:** [https://fraud-detection-ml-jp1y.onrender.com](https://fraud-detection-ml-jp1y.onrender.com)
-🔗 **Live Web App:** [Streamlit Cloud](https://fraud-detection-ml-adhipatya3552.streamlit.app)
+🔗 **Live Web App:** [Streamlit Cloud](https://fraud-detection-ml-adhipatya.streamlit.app/)
 
 </div>
 
@@ -66,7 +66,7 @@ This project builds a **complete, production-style machine learning pipeline** t
 
 | Service | URL | Status |
 |---------|-----|--------|
-| **🌐 Web App** | [Streamlit Cloud](https://fraud-detection-ml-adhipatya3552.streamlit.app) | ✅ Live |
+| **🌐 Web App** | [Streamlit Cloud](https://fraud-detection-ml-adhipatya.streamlit.app/) | ✅ Live |
 | **🔗 API** | [https://fraud-detection-ml-jp1y.onrender.com](https://fraud-detection-ml-jp1y.onrender.com) | ✅ Live |
 | **📖 API Docs** | [Swagger UI](https://fraud-detection-ml-jp1y.onrender.com/docs) | ✅ Live |
 
@@ -509,7 +509,7 @@ streamlit run app/streamlit_app.py
 
 The Streamlit UI will open in your browser at `http://localhost:8501`.
 
-> 💡 **Or use the live deployed app:** [Streamlit Cloud](https://fraud-detection-ml-adhipatya3552.streamlit.app) — no local setup needed.
+> 💡 **Or use the live deployed app:** [Streamlit Cloud](https://fraud-detection-ml-adhipatya.streamlit.app/) — no local setup needed.
 
 ---
 
@@ -566,7 +566,7 @@ curl -X POST "https://fraud-detection-ml-jp1y.onrender.com/predict" \
 
 ## 💻 Streamlit Web App
 
-> 🔗 **Live App:** [https://fraud-detection-ml-adhipatya3552.streamlit.app](https://fraud-detection-ml-adhipatya3552.streamlit.app)
+> 🔗 **Live App:** [https://fraud-detection-ml-adhipatya.streamlit.app/](https://fraud-detection-ml-adhipatya.streamlit.app/)
 
 The Streamlit app (`app/streamlit_app.py`) provides a visual interface for testing the fraud detection model without touching the API directly. It is deployed on **Streamlit Community Cloud** and connects to the Render-hosted FastAPI backend.
 
@@ -618,7 +618,7 @@ The Streamlit frontend is deployed on **[Streamlit Community Cloud](https://stre
 |--------|-------|
 | **Platform** | Streamlit Community Cloud |
 | **Main File** | `app/streamlit_app.py` |
-| **URL** | [https://fraud-detection-ml-adhipatya3552.streamlit.app](https://fraud-detection-ml-adhipatya3552.streamlit.app) |
+| **URL** | [https://fraud-detection-ml-adhipatya.streamlit.app/](https://fraud-detection-ml-adhipatya.streamlit.app/) |
 | **Auto-Deploy** | Yes — deploys automatically on every push to `main` |
 
 ---
