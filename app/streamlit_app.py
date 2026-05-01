@@ -30,23 +30,28 @@ if "initialized" not in st.session_state:
 
 @st.cache_data
 def load_data():
-    return pd.read_csv("data/creditcard_2023.csv")
+    try:
+        return pd.read_csv("data/creditcard_2023.csv")
+    except FileNotFoundError:
+        return None
 
 df = load_data()
 
 # ---------------- BUTTON FUNCTIONS ---------------- #
 
 def load_normal():
-    sample = df[df["Class"] == 0].sample(1).iloc[0]
-    values = sample.drop(["Class", "id"]).tolist()
-    for i in range(29):
-        st.session_state[f"f{i}"] = float(values[i])
+    if df is not None:
+        sample = df[df["Class"] == 0].sample(1).iloc[0]
+        values = sample.drop(["Class", "id"]).tolist()
+        for i in range(29):
+            st.session_state[f"f{i}"] = float(values[i])
 
 def load_fraud():
-    sample = df[df["Class"] == 1].sample(1).iloc[0]
-    values = sample.drop(["Class", "id"]).tolist()
-    for i in range(29):
-        st.session_state[f"f{i}"] = float(values[i])
+    if df is not None:
+        sample = df[df["Class"] == 1].sample(1).iloc[0]
+        values = sample.drop(["Class", "id"]).tolist()
+        for i in range(29):
+            st.session_state[f"f{i}"] = float(values[i])
 
 def reset_values():
     for i in range(29):
@@ -60,11 +65,13 @@ def random_values():
 
 col1, col2, col3, col4 = st.columns(4)
 
+data_available = df is not None
+
 with col1:
-    st.button("📥 Normal Sample", on_click=load_normal)
+    st.button("📥 Normal Sample", on_click=load_normal, disabled=not data_available)
 
 with col2:
-    st.button("⚠️ Fraud Sample", on_click=load_fraud)
+    st.button("⚠️ Fraud Sample", on_click=load_fraud, disabled=not data_available)
 
 with col3:
     st.button("🔄 Reset", on_click=reset_values)
