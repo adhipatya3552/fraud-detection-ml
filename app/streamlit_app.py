@@ -18,7 +18,7 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-st.title("💳 AI Fraud Detection System")
+st.title("💳 AI Credit Card Fraud Detection")
 st.caption("Real-time fraud prediction using Machine Learning")
 
 # ---------------- INIT ---------------- #
